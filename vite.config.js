@@ -1,4 +1,5 @@
 const isCodeSandbox = 'SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env
+const { resolve } = require('path')
 
 export default {
     root: 'src/',
@@ -9,10 +10,13 @@ export default {
         host: true,
         open: !isCodeSandbox // Open if it's not a CodeSandbox
     },
-    build:
-    {
-        outDir: '../dist',
-        emptyOutDir: true,
-        sourcemap: true
-    }
+    build: {
+        rollupOptions: {
+          input: {
+            main: resolve(__dirname, 'index.html'),
+            about: resolve(__dirname, 'about.html'),
+            projets: resolve(__dirname, 'projets.html')
+          }
+        }
+      }
 }
