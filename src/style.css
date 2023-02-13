@@ -97,6 +97,7 @@ header{
     font-size: 5vmin;
     padding-left: 10%;
     padding-right: 10%;
+    overflow: hidden;
 }
 
 
