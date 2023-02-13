@@ -11,12 +11,12 @@ export default {
         open: !isCodeSandbox // Open if it's not a CodeSandbox
     },
     build: {
-        rollupOptions: {
-            input: {
-              main: resolve(__dirname, 'src/index.html'),
-              about: resolve(__dirname, 'src/about.html'),
-              projets: resolve(__dirname, 'src/projets.html')
-            }
+       rollupOptions: {
+          input: {
+            main: resolve(__dirname, 'src/index.html'),
+            about: resolve(__dirname, 'src/about.html'),
+            projets: resolve(__dirname, 'src/projets.html')
           }
+        }
       }
 }
