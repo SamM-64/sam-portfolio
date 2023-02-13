@@ -1,5 +1,5 @@
 const isCodeSandbox = 'SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env
-const { resolve } = require('path')
+import { resolve } from 'path'
 
 export default {
     root: 'src/',
@@ -12,11 +12,11 @@ export default {
     },
     build: {
         rollupOptions: {
-          input: {
-            main: resolve(__dirname, 'index.html'),
-            about: resolve(__dirname, 'about.html'),
-            projets: resolve(__dirname, 'projets.html')
+            input: {
+              main: resolve(__dirname, 'src/index.html'),
+              about: resolve(__dirname, 'src/about.html'),
+              projets: resolve(__dirname, 'src/projets.html')
+            }
           }
-        }
       }
 }
